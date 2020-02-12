@@ -1,1 +1,1 @@
-# codeforces_tasks
+# codeforces and udemy tasks
