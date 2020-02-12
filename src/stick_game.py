@@ -21,8 +21,8 @@ def end_of_game(sticks):
 
 
 def game():
-    player_1 = input("Назови себя игрок \n")
-    player_2 = input("Назови себя игрок \n")
+    player_1 = input("Назови себя игрок 1 \n")
+    player_2 = input("Назови себя игрок 2 \n")
     player_turn = player_1
     number_of_sticks = int(input("Сколько палочек для игры хотите? \n"))
     while not end_of_game(number_of_sticks):
