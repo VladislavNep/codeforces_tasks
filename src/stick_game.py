@@ -8,8 +8,8 @@
 """
 
 
-def can_take(sticks):
-    return 1 <= sticks <= 3
+def can_take(sticks_taken, remaining_sticks):
+    return 1 <= sticks_taken <= 3 and sticks_taken <= remaining_sticks
 
 
 def switch_player_turn(turn, player_1, player_2):
@@ -28,8 +28,9 @@ def game():
     while not end_of_game(number_of_sticks):
         taken = int(input(f"{player_turn} ваш ход. Вы можете взять от 1 до 3 палочек. \n"))
 
-        if not can_take(taken):
-            print(f"Вы взяли {taken}, можно только 1, 2, 3. Попробуйте еще \n")
+        if not can_take(taken, number_of_sticks):
+            print(f"В игре {number_of_sticks} палочек, вы взяли {taken}. \nможно взять только 1, 2, 3 или же вы взяли "
+                  f"больше чем осталось палочек. Попробуйте еще \n")
             continue
 
         number_of_sticks -= taken
